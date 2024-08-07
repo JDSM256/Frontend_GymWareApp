@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="row mb-2">
+    <div class="col-sm-6">
+      <h1 class="m-0">Planes</h1>
+    </div><!-- /.col -->
+    <div class="col-sm-6">
+      <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Planes</li>
+      </ol>
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+
+  <input type="button" value="insertar plan" class="btn btn-dark" (click)="mostrar_formulario('ver')">
+  <br>
+  <br>
+  <div id="formulario" *ngIf="show_form==true" >
+    <form >
+      <div class="row">
+        <div class="col-lg-4">
+          <input type="text" class="form-control" placeholder="codigo_plan" [(ngModel)]="obj_plan.codigo_plan" name="cedula">
+          <span style="color:red" *ngIf="validar_codigo_plan==false">insertar codigo </span>
+        </div>
+        <div class="col-lg-4">
+          <input type="text" class="form-control" placeholder="Nombre del plan" [(ngModel)]="obj_plan.nombre_plan" name="nombre plan">
+          <span style="color:red" *ngIf="validar_nombre_plan==false">insertar Nombre del plan</span>
+        </div>
+        <div class="col-lg-4">
+          <input type="text" class="form-control" placeholder="precio plan " [(ngModel)]="obj_plan.precio_plan" name="precio_plan">
+          <span style="color:red" *ngIf="validar_precio_plan==false">insertar precio del plan </span>
+        </div>
+      </div>
+      
+      <div class="row">
+         <div class="col-lg-4">
+          <input type="button" value="Guardar" class="btn btn-primary" style="width: 100%;" (click)="validar('guardar')" *ngIf="botones_form==false" >
+          <input type="button" value="editar" class="btn btn-primary" style="width: 100%;" (click)="validar('editar')" *ngIf="botones_form==true" >
+        </div>
+        
+        <div class="col-lg-4">
+          <input type="button" value="Cancelar" class="btn btn-secondary" style="width: 100%;" (click)="mostrar_formulario('no ver')">
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+  
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th>id plan</th>
+        <th>codigo_plan</th>
+        <th>nombre plan</th>
+        <th>Precio plan </th>
+  
+        <th>Acciones</th>
+      </tr>
+      <tr *ngFor="let item of plan">
+        <td>{{item.id_plan}}</td>
+        <td>{{item.codigo_plan}}</td>
+        <td>{{item.nombre_plan}}</td>
+        <td>{{item.precio_plan}}</td>
+    
+        <td>
+          <span class="fas fa-edit" style="color:blue; cursor: pointer" title="editar" (click)="cargar_datos(item, item.id_plan)"></span> 
+
+          <span class="fas fa-minus-square" style="color:red; cursor: pointer" title="eliminar" (click)="eliminar(item.id_plan)"></span> 
+        </td>
+      </tr>
+    </table>
+
+
+</div><!-- /.container-fluid -->
+<!-- /.content-header -->
+
+<section class="content">
+<div class="container-fluid">
+
+
+</div>
+</section>

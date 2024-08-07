@@ -1,0 +1,72 @@
+<!-- <br>
+<br>
+<br><br><br><br><br><br><br><br><br><br>
+<div id="login" class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-3"></div>
+<div class="col-lg-3">
+  <div id="form">
+    <div id="datos">
+      <input type="email" id="email_usuario" placeholder="email" class="form-control" [(ngModel)]="email_usuario">
+      <input type="password" id="clave" placeholder="Contraseña" class="form-control" [(ngModel)]="clave" >
+      <div class="col-12" *ngIf="error==true">
+        <span style="color: #ff557f;">Email o Contraseña incorrecta </span><br>
+      </div>
+      <input type="button" value="Ingresar" class="btn btn-dark btn-block" value="INICIAR SESION" (click)="consulta('')"> 
+    </div> 
+  </div>
+</div>
+<div class="col-lg-3"></div>
+</div> -->
+
+<div class="text-align">
+  <div class="login-box">
+    <div class="login-logo">
+      <a><b>GyM</b>WARe</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Iniciar sesion</p>
+
+        <form method="post">
+          <div class="input-group mb-3">
+            <input type="email" id="email_usuario" placeholder="email" class="form-control" [(ngModel)]="email_usuario"
+              [ngModelOptions]="{standalone: true}">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" id="clave" placeholder="Contraseña" class="form-control" [(ngModel)]="clave"
+              [ngModelOptions]="{standalone: true}">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12" *ngIf="error==true">
+            <span style="color: #ff557f;">Email o Contraseña incorrecta </span><br>
+          </div>
+          <div class="row">
+            <!-- /.col -->
+            <div class="col-12">
+              <input type="button" value="Ingresar" class="btn btn-dark btn-block" value="INICIAR SESION"
+                (click)="consulta('')">
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
+
+
+        <!-- /.social-auth-links -->
+
+
+      </div>
+      <!-- /.login-card-body -->
+    </div>
+  </div>
+</div>

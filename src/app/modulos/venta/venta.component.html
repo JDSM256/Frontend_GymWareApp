@@ -1,0 +1,53 @@
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Ventas</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Ventas</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+
+      <input type="button" value="insertar venta" class="btn btn-dark" (click)="insertar()">
+      <div class="table-responsive">
+        <table class="table">
+          <tr>
+            <th>id venta</th>
+            <th>fecha</th>
+            <th>cliente</th>
+            <th>Descripcion</th>
+            
+            <th>total</th>
+            <th>Acciones</th>
+            
+          </tr>
+          <tr *ngFor="let item of venta">
+            <td>{{item.id_venta}}</td>
+            <td>{{item.fecha}}</td>
+            <td>{{item.cliente}}</td>
+            <td>{{item.descripcion}</td>
+            <td>{{item.total | currency}}</td>
+            
+            
+            <td>
+              <span class="fas fa-edit" style="color:blue; cursor: pointer" title="editar" ></span> 
+              <span class="fas fa-minus-square" style="color:red; cursor: pointer" title="eliminar" ></span> 
+            </td>
+          </tr>
+        </table>
+
+
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+  
+  <section class="content">
+    <div class="container-fluid">
+
+
+    </div>
+  </section>

@@ -1,0 +1,114 @@
+<div class="content-header">
+    <div class="container-fluid">
+
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Usuarios</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Usuarios</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    
+      <input type="button" value="insertar usuario" class="btn btn-dark" (click)="mostrar_formulario('ver')">
+      <br>
+      <br>
+      <div id="formulario" *ngIf="show_form==true" >
+        <form >
+          <div class="row">
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="Cedula" [(ngModel)]="obj_usuario.cedula" name="cedula">
+              <span style="color:red" *ngIf="validar_cedula==false">insertar codigo </span>
+            </div>
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="Nombre del usuario" [(ngModel)]="obj_usuario.nombre_usuario" name="nombre_usuario">
+              <span style="color:red" *ngIf="validar_nombre_usuario==false">insertar Nombre del usuario</span>
+            </div>
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="Direccion" [(ngModel)]="obj_usuario.direccion" name="direccion">
+              <span style="color:red" *ngIf="validar_direccion==false">insertar direccion usuario</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="fecha de nacimiento del usuario" [(ngModel)]="obj_usuario.fecha_nacimiento" name="fecha_nacimiento" >
+              <span style="color:red" *ngIf="validar_fecha_nacimiento==false">insertar fecha de nacimiento del usuario</span>
+            </div>
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="celular del usuario" [(ngModel)]="obj_usuario.celular" name="celular" >
+              <span style="color:red" *ngIf="validar_celular==false">insertar celular del usuario</span>
+            </div>
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="email del usuario" [(ngModel)]="obj_usuario.email_usuario" name="email_usuario" >
+              <span style="color:red" *ngIf="validar_email_usuario==false">insertar email del usuario</span>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-4">
+                <input type="text" class="form-control" placeholder="rol del usuario" [(ngModel)]="obj_usuario.rol" name="rol">
+                <span style="color:red" *ngIf="validar_rol==false">insertar rol del usuario</span>
+              </div>
+
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="clave" [(ngModel)]="obj_usuario.clave" name="clave">
+              <span style="color:red" *ngIf="validar_rol==false">insertar rol del usuario</span>
+            </div>
+     
+         
+            <div class="col-lg-4">
+              <input type="button" value="Guardar" class="btn btn-primary" style="width: 100%;" (click)="validar('guardar')" *ngIf="botones_form==false" >
+              <input type="button" value="editar" class="btn btn-primary" style="width: 100%;" (click)="validar('editar')" *ngIf="botones_form==true" >
+            </div>
+            
+            <div class="col-lg-4">
+              <input type="button" value="Cancelar" class="btn btn-secondary" style="width: 100%;" (click)="mostrar_formulario('no ver')">
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <tr>
+            <th>id usuario</th>
+            <th>cedula</th>
+            <th>nombre</th>
+            <th>direccion</th>
+            <th>fecha nacimiento</th>
+            <th>celular</th>
+            <th>email usuario</th>
+            <th>rol</th>
+            <th>clave</th>
+            <th>Acciones</th>
+          </tr>
+          <tr *ngFor="let item of usuario">
+            <td>{{item.id_usuario}}</td>
+            <td>{{item.cedula}}</td>
+            <td>{{item.nombre_usuario}}</td>
+            <td>{{item.direccion}}</td>
+            <td>{{item.fecha_nacimiento}}</td>
+            <td>{{item.celular}}</td>
+            <td>{{item.email_usuario}}</td>
+            <td>{{item.rol}}</td>
+            <td>{{item.clave}}</td>
+            <td>
+              <span class="fas fa-edit" style="color:blue; cursor: pointer" title="editar" (click)="cargar_datos(item, item.id_usuario)"></span> 
+              <span class="fas fa-minus-square" style="color:red; cursor: pointer" title="eliminar" (click)="eliminar(item.id_usuario)" ></span> 
+            </td>
+          </tr>
+        </table>
+    
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+  
+  <section class="content">
+    <div class="container-fluid">
+
+
+    </div>
+  </section>
