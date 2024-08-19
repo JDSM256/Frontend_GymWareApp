@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './modulos/login/login.component';
 import { NoEncontroComponent } from './modulos/no-encontro/no-encontro.component';
 import { PedidoComponent } from './modulos/pedido/pedido.component';
+import { PagInicialComponent } from './estructura/pag-inicial/pag-inicial.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PedidoComponent } from './modulos/pedido/pedido.component';
     VentaComponent,
     LoginComponent,
     NoEncontroComponent,
-    PedidoComponent
+    PedidoComponent,
+    PagInicialComponent
   ],
   imports: [
     BrowserModule,

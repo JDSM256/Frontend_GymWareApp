@@ -24,7 +24,7 @@ constructor(private router:Router){}
     sessionStorage.setItem("email_usuario", "");
     sessionStorage.setItem("nombre", "" );
     sessionStorage.setItem("rol", "" );
-    this.router.navigate(['login']);
+    this.router.navigate(['']);
 
   }
 }

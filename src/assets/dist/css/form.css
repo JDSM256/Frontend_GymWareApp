@@ -1,0 +1,346 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+     /* background-image: linear-gradient(to bottom right,#272727, #666666);  */
+     background-image: linear-gradient(to bottom right,#3c3c3cd3, rgba(136, 204, 136, 0.226));
+     background-repeat: no-repeat;
+     background-size: cover;
+     opacity: .7;
+
+}
+
+.form_body{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right,#3c3c3cd3, rgba(136, 204, 136, 0.226)), url('../assets/img/hombre-fuerte-entrenando-gimnasio.jpg');
+    background-repeat: no-repeat;
+}
+
+.login_form{
+    width: 400px;
+    height: 525px;
+    background-image: linear-gradient(to bottom right,#3c3c3cd3, rgba(136, 204, 136, 0.226)), url('../assets/img/hombre-fuerte-entrenando-gimnasio.jpg');
+    background-size: cover;
+    margin: auto;
+    margin-top: 100px;    
+    border-radius: 40px;
+    padding: 200px 40px;
+    margin-bottom: 130px;
+
+}
+.avatar{
+    background-image: linear-gradient(to bottom right,#3c3c3cd3, rgba(136, 204, 136, 0.226));
+    margin-top: -100px;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    
+    
+}
+
+.form_title{
+    color:white;
+    margin-top: -100px;
+    margin-bottom: 40px;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+.gender_option{
+    margin-bottom: 20px;
+}
+
+
+.user_name{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#3c3c3cd3, rgba(136, 204, 136, 0.226));
+    color:white;
+    border: none;
+}
+
+.new_user_name{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#a7a7a7, #d3d3d3);
+    color:white;
+    border: none;
+}
+
+.user_id{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#a7a7a7, #d3d3d3);
+    color:white;
+    border: none;
+}
+
+.user_email{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#a7a7a7, #d3d3d3);
+    color:white;
+    border: none;
+}
+
+.password{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#3c3c3cd3, rgba(136, 204, 136, 0.226));
+    color:white;
+    border: none;
+}
+
+.phone_number{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#a7a7a7, #d3d3d3);
+    color:white;
+    border: none;
+}
+
+.remenber_me{
+    display: inline-flex;
+    justify-content: space-between;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: small;
+    margin-top: 0;
+    padding: 0;
+}
+
+.forgot_password{
+    display: inline-flex;
+    margin-left: 100px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: small;
+    font-style: italic;
+    text-decoration: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+.forgot_password:hover{
+    color:#bdbdbd;
+}
+
+.login_button{
+    font-weight: 400;
+    font-size: medium;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: none;
+    background: linear-gradient(to bottom right,#1a1a1ad3, rgba(136, 204, 136, 0.226));
+    color:white;
+}
+
+
+.login_button:hover{
+    background: linear-gradient(to bottom right,#3e4144,#65727ca4);
+}
+
+
+
+.new_user_form{
+    width: 600px;
+    height: 900px;
+    background-image: linear-gradient(to bottom right,#3c3c3cd3, rgba(136, 204, 136, 0.226));
+    background-size: cover;
+    margin: auto;
+    margin-top: 60px;    
+    border-radius: 40px;
+    padding: 200px 40px;
+    margin-bottom: 130px;
+}
+
+
+.new_user_address{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#a7a7a7, #d3d3d3);
+    color:white;
+    border: none;
+}
+
+span{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+}
+
+header.menu{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 60px;
+    background-image: linear-gradient(to bottom right,#272727, #666666)
+}
+
+
+.normal_button{
+    
+    font-weight: 400;
+    font-size: large;
+    width: 200px; 
+    height: 100%;
+    text-decoration: none;
+    margin-top: 40px;
+    border: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    color:white;
+}
+
+.normal_button_1{
+    font-weight: 400;
+    font-size: large;
+    width: 200px; 
+    height: 100%;
+    text-decoration: none;
+    margin-top: 40px;
+    border: none;
+    color:white;
+    
+}
+
+.sell_button{
+    font-weight: 400;
+    font-size: large;
+    width: 200px; 
+    height: 100%;
+    text-decoration: none;
+    margin-top: 40px;
+    border: none;
+    color:white;
+}
+
+.cards{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom right,#a7a7a7, #d3d3d3);
+    color:white;
+    border: none;
+}
+
+.card_container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
+}
+
+.card_container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+
+}
+
+.card_container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card_container .card img{
+    width: 330px;
+    height: 220px;
+
+}
+
+.side_bar-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* left: -320px; */
+
+}
+
+.sidebar{
+    width: 320px;
+    height: 100%;
+    background: linear-gradient(to bottom right,#a7a7a7, #d3d3d3);
+    overflow: auto;
+    float: left;
+}
+
+.sidebar img{
+    width: 130px;
+    display: block;
+    margin: 10px auto;
+    opacity: .7;
+}
+
+.side-hide{
+    float: right;
+    margin: 12px;
+    color:black;
+    opacity: 0.7;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar ul li{
+    list-style: none;
+    padding: 12px 10px;
+
+}
+
+.sidebar ul li:hover{
+    background: #a7a7a7;
+    cursor: pointer;
+
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color:black;
+    font-size: 17px;
+    font-family: sans-serif;
+    opacity: 0.7;
+}

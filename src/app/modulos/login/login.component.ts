@@ -13,7 +13,7 @@ export class LoginComponent {
   clave: any;
   error= false;
   usuario:any; 
- 
+  id_usuario:any;
 
   user= {
     cedula:"",
@@ -31,8 +31,7 @@ constructor (private slogin: LoginService, private router: Router){}
 
 ngOnInit(): void {
   sessionStorage.setItem("id_usuario",  "");
-  sessionStorage.setItem("email_usuario", "");
-  
+  sessionStorage.setItem("email_usuario", "");  
   sessionStorage.setItem("nombre_usuario", "" );
   sessionStorage.setItem("rol", "" );
  

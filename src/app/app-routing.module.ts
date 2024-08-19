@@ -10,12 +10,17 @@ import { LoginComponent } from './modulos/login/login.component';
 import { NoEncontroComponent } from './modulos/no-encontro/no-encontro.component';
 import { validaruserGuard } from './guard/validaruser.guard';
 import { PedidoComponent } from './modulos/pedido/pedido.component';
+import { PagInicialComponent } from './estructura/pag-inicial/pag-inicial.component';
+
 
 const routes:Routes = [
+  {path: '', component: PagInicialComponent},
+
   {
       path: '', component: PrincipalComponent,
       children: 
       [
+          
           {path: 'dashboard', component: DashboardComponent, canActivate: [validaruserGuard]},
           {path: 'usuarios', component: UsuariosComponent, canActivate: [validaruserGuard]},
           {path: 'planes', component: PlanesComponent, canActivate: [validaruserGuard]},
@@ -23,11 +28,12 @@ const routes:Routes = [
           {path: 'clientes', component: ClientesComponent, canActivate: [validaruserGuard]},
           {path: 'pedido', component: PedidoComponent, canActivate: [validaruserGuard]},
           
-          {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
+          {path: '', redirectTo: 'paginicial', pathMatch: 'full'}
           
       ]
 
   },
+  {path: 'paginicial', component: PagInicialComponent},
   {path: 'login', component: LoginComponent},
   {path: '**', component: NoEncontroComponent},
 
